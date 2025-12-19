@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludera</title>
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;500;600;700;800;900&family=Black+Ops+One&family=VT323&family=Audiowide&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body body data-theme="default">
+    <a id="top"></a>
+    <div id="root"></div>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+      <button class="theme-btn" data-theme="default" title="Default Theme">
+        🌞
+      </button>
+      <button class="theme-btn" data-theme="dark" title="Dark Mode">⚔️</button>
+      <button class="theme-btn" data-theme="girlie" title="Girlie Pop">
+        🩷
+      </button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#top" class="logo-icon"
+            ><img src="images/Ludera_Logo_Gold.webp" alt="Logo" />
+          </a>
+          <!-- <span class="logo-text">Ludera</span> -->
+        </div>
+        <div class="nav-links">
+          <a href="#problem">Why Ludera</a>
+          <a href="#features">Features</a>
+          <a href="#traction">Traction</a>
+          <!-- <a href="#demo">Demo</a> -->
+        </div>
+        <div class="nav-actions">
+          <!-- <button class="btn-signin">Sign in</button> -->
+          <button class="btn-join">Join Waitlist</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-bg-shapes">
+          <img
+            src="data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 20C40 8.954 48.954 0 60 0s20 8.954 20 20v20h20c11.046 0 20 8.954 20 20s-8.954 20-20 20H80v20c0 11.046-8.954 20-20 20s-20-8.954-20-20V80H20c-11.046 0-20-8.954-20-20s8.954-20 20-20h20V20z' fill='%238752C6'/%3E%3C/svg%3E"
+            alt=""
+            class="shape-puzzle"
+          />
+          <img
+            src="data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='60' cy='60' r='50' fill='none' stroke='%23FF69B4' stroke-width='20'/%3E%3C/svg%3E"
+            alt=""
+            class="shape-donut"
+          />
+        </div>
+
+        <div class="hero-badge">🎮 Game-First Learning Platform</div>
+        <h1 class="hero-title">
+          A learning experience that won't make you fall asleep
+        </h1>
+        <p class="hero-subtitle" id="video-top">
+          Transform your notes into epic quests. Turn flashcards into powerful
+          attacks. Make learning an immersive fantasy RPG.
+        </p>
+
+        <!-- Video Preview with Play Button -->
+        <div class="video-preview" onclick="openVideoModal()">
+          <img src="images/game_image.png" alt="Game Demo Preview" />
+          <div class="video-overlay">
+            <div class="play-button">
+              <svg viewBox="0 0 24 24" width="64" height="64">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
+          <div class="video-duration">0:20</div>
+        </div>
+
+        <!-- Video Modal -->
+        <div
+          class="video-modal"
+          id="videoModal"
+          onclick="closeVideoModal(event)"
+        >
+          <div class="video-modal-content">
+            <button class="close-modal" onclick="closeVideoModal(event)" aria-label="Close menu">
+              ×
+            </button>
+            <!-- HTML5 Video Player for local files -->
+            <video id="videoPlayer" controls>
+              <source src="video/video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <!-- Mini Social Proof Ticker -->
+        <div class="social-ticker">
+          <div class="ticker-container">
+            <div class="ticker-track">
+              <div class="ticker-item">
+                <span class="ticker-icon">⚔️</span>
+                <span class="ticker-text"
+                  >Sarah just completed Biology Quest!</span
+                >
+              </div>
+              <div class="ticker-item">
+                <span class="ticker-icon">✨</span>
+                <span class="ticker-text">Mike earned 500 XP in Chemistry</span>
+              </div>
+              <div class="ticker-item">
+                <span class="ticker-icon">🏆</span>
+                <span class="ticker-text"
+                  >Emma unlocked Master Scholar badge</span
+                >
+              </div>
+              <div class="ticker-item">
+                <span class="ticker-icon">🔥</span>
+                <span class="ticker-text">Alex achieved a 7-day streak!</span>
+              </div>
+              <div class="ticker-item">
+                <span class="ticker-icon">💎</span>
+                <span class="ticker-text">Jordan collected 1000 gems</span>
+              </div>
+              <!-- Duplicate for seamless loop -->
+              <div class="ticker-item">
+                <span class="ticker-icon">⚔️</span>
+                <span class="ticker-text"
+                  >Sarah just completed Biology Quest!</span
+                >
+              </div>
+              <div class="ticker-item">
+                <span class="ticker-icon">✨</span>
+                <span class="ticker-text">Mike earned 500 XP in Chemistry</span>
+              </div>
+              <div class="ticker-item">
+                <span class="ticker-icon">🏆</span>
+                <span class="ticker-text"
+                  >Emma unlocked Master Scholar badge</span
+                >
+              </div>
+              <div class="ticker-item">
+                <span class="ticker-icon">🔥</span>
+                <span class="ticker-text">Alex achieved a 7-day streak!</span>
+              </div>
+              <div class="ticker-item">
+                <span class="ticker-icon">💎</span>
+                <span class="ticker-text">Jordan collected 1000 gems</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Instruction section -->
+    <section class="how-it-works">
+      <div class="how-container">
+        <h3 class="how-title">Level Up Your Learning in 3 Steps</h3>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">📤</div>
+            <h4 class="step-title">Upload</h4>
+            <p class="step-description">Drop your notes, CSVs</p>
+          </div>
+
+          <div class="step-arrow">→</div>
+
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+               <img src="images/hat.png" alt="hat" />
+            </div>
+            <h4 class="step-title">Transform</h4>
+            <p class="step-description">
+              Watch them become quests, battles & challenges
+            </p>
+          </div>
+
+          <div class="step-arrow">→</div>
+
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon">
+              <img src="images/Trophy.png" alt="trophy" />
+            </div>
+            <h4 class="step-title">Conquer</h4>
+            <p class="step-description">
+              Learn while gaining XP, items & achievements
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem">
+      <div class="problem-container">
+        <h2 class="section-title">
+          Learning feels like a chore in the Digital Age
+        </h2>
+        <div class="problem-grid">
+          <div class="problem-card">
+            <div class="problem-icon">
+              <img src="images/open-book.png" alt="book" />
+            </div>
+            <h3>Traditional study tools don't engage</h3>
+            <p>
+              Static notes and flashcards no longer hold our attention in a
+              world of dynamic content.
+            </p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <img src="images/focus.png" alt="focus" />
+            </div>
+            <h3>Short-form content has killed focus</h3>
+            <p>
+              Students are trained on TikTok/Reels with 3-second attention
+              spans. Traditional learning can't compete.
+            </p>
+          </div>
+          <div class="problem-card">
+            <div class="problem-icon">
+              <img src="images/ai.png" alt="ai" />
+            </div>
+            <h3>EdTech giants can't keep up</h3>
+            <p>
+              Big players are bolting on AI, not integrating it. They're stuck
+              in the old paradigm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="features" class="solution">
+      <div class="solution-container">
+        <h2 class="section-title">Game-first, not gamified</h2>
+        <p class="section-subtitle">
+          While legacy edtech platforms bolt game mechanics onto pre-built
+          content, Ludera starts as a game.
+        </p>
+
+        <div class="solution-features">
+          <div class="feature-large">
+            <div class="feature-content">
+              <div class="feature-icon-large">
+                <img src="images/target.png" alt="target image" />
+              </div>
+              <h3>AI that works for you</h3>
+              <p>
+                We level it up by transforming notes into quests, flashcards
+                into attacks, and learning into an immersive fantasy RPG.
+              </p>
+              <ul class="feature-list">
+                <li>📚 Notes → Epic Quests</li>
+                <li>🗡️ Flashcards → Battle Attacks</li>
+                <li>🏆 Study Sessions → XP & Levels</li>
+                <li>🎮 Learning → Adventure</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <div class="game-mockup">
+                <div class="mockup-header">
+                  <span>⚔️ Quest: Chapter 3 Review</span>
+                </div>
+                <div class="mockup-content">
+                  <div class="mockup-character">
+                    <img src="images/master.png" alt="master image" />
+                  </div>
+                  <div class="mockup-text">
+                    Answer correctly to deal damage!
+                  </div>
+                  <div class="mockup-progress">
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feature-large reverse">
+            <div class="feature-content">
+              <div class="feature-icon-large">
+                <img src="images/group.png" alt="group image" />
+              </div>
+              <h3>Learning is better together</h3>
+              <p>
+                Clear levels together, compete for XP, and hype each other up.
+                Social learning that actually works.
+              </p>
+              <ul class="feature-list">
+                <li>🤝 Co-op Study Sessions</li>
+                <li>⚡ XP Leaderboards</li>
+                <li>🎊 Group Achievements</li>
+                <li>💬 Study Party Chat</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <div class="leaderboard-mockup">
+                <div class="mockup-header">
+                  <span>🏆 Top Scholars</span>
+                </div>
+                <div class="leaderboard-list">
+                  <div class="leaderboard-item rank-1">
+                    <span class="rank">🥇</span>
+                    <span class="name">Alex</span>
+                    <span class="xp">2,450 XP</span>
+                  </div>
+                  <div class="leaderboard-item rank-2">
+                    <span class="rank">🥈</span>
+                    <span class="name">Sarah</span>
+                    <span class="xp">2,380 XP</span>
+                  </div>
+                  <div class="leaderboard-item rank-3">
+                    <span class="rank">🥉</span>
+                    <span class="name">Jordan</span>
+                    <span class="xp">2,210 XP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Traction Section -->
+    <section id="traction" class="traction">
+      <div class="traction-container">
+        <h2 class="section-title">TRACTION</h2>
+        <div class="traction-grid">
+          <div class="traction-card highlight">
+            <div class="traction-icon">
+              <img src="images/networking.png" alt="networking image" />
+            </div>
+            <h3>20+ interviews</h3>
+            <p>
+              Confirmed demand for game-first study tools across student
+              demographics
+            </p>
+          </div>
+          <div class="traction-card highlight">
+            <div class="traction-icon">
+              <img src="images/calendar.png" alt="calendar image" />
+            </div>
+            <h3>Early demo</h3>
+            <p>
+              Personalized gameplay that adapts to each learner's pace and style
+            </p>
+          </div>
+          <div class="traction-card highlight">
+            <div class="traction-icon">
+              <img src="images/rocket.png" alt="rocket image" />
+            </div>
+            <h3>4-person powerhouse</h3>
+            <p>
+              Shipping weekly updates in remote sync, moving fast and building
+              things
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------- Team Section ----------------------------------->
+    <section class="team-section" id="team">
+      <h2 class="section-title">Meet the Team</h2>
+      <p class="section-subtitle">
+        The adventurers behind Ludera, making learning legendary one quest at a
+        time
+      </p>
+
+      <div class="team-carousel-container">
+        <button class="carousel-nav prev" onclick="changeSlide(-1)">‹</button>
+
+        <div class="team-carousel">
+          <div class="team-track" id="teamTrack">
+            <!-- Content will be dynamically generated -->
+          </div>
+        </div>
+
+        <button class="carousel-nav next" onclick="changeSlide(1)">›</button>
+      </div>
+
+      <div class="carousel-indicators" id="indicators"></div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="particles">
+          <span style="left: 10%; animation-delay: 0s;"></span>
+          <span style="left: 30%; animation-delay: 1s;"></span>
+          <span style="left: 50%; animation-delay: 2s;"></span>
+          <span style="left: 70%; animation-delay: 0.5s;"></span>
+          <span style="left: 85%; animation-delay: 1.4s;"></span>
+        </div>
+        <h2>Ready to level up your learning?</h2>
+        <p>
+          Join the waitlist and be among the first to turn your notes into an
+          epic adventure.
+        </p>
+        <button class="btn-cta-large">Join the Waitlist</button>
+        <p class="cta-note">
+          Secure your spot today • Early access for first 100 users
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <a href="#top" class="logo-icon"
+              ><img src="images/Ludera_logo11.PNG" alt="Logo" />
+            </a>
+          </div>
+          <p>Making learning an adventure.</p>
+          <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Discord</a>
+            <a href="https://www.instagram.com/ludera.app/">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#video-top">Demo</a>
+          <a href="#">Pricing</a>
+          <a href="#">Roadmap</a>
+        </div>
+        <div class="footer-section">
+          <h4>Company</h4>
+          <a href="#team">About</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+          <a href="#">Press Kit</a>
+        </div>
+        <div class="footer-section">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="#">Contact</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
